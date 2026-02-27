@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Grammar Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="grammar-page">
+
+<div class="card dashboard-box">
+
+    <!-- ================= HEADER ================= -->
+    <div class="flex-between">
+        <h1 class="heading-main">AI Grammar Checker</h1>
+
+        <div>
+            <button class="dark-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+
+
+            <button class="btn-primary" style="width:120px; margin-left:10px;" onclick="logout()">
+                Logout
+            </button>
+        </div>
+    </div>
+
+    <!-- ================= SPLIT LAYOUT ================= -->
+    <div style="display:flex; gap:40px; margin-top:40px;">
+
+        <!-- LEFT SIDE (INPUT) -->
+        <div style="flex:1;">
+            <h2 class="heading-sub">Enter Text</h2>
+
+            <textarea 
+                class="textarea-field" 
+                id="text" 
+                placeholder="Type your paragraph here...">
+            </textarea>
+
+            <button 
+                class="btn-primary" 
+                style="width:200px; margin-top:20px;"
+                onclick="checkGrammar()">
+                Check Grammar
+            </button>
+
+            <!-- Highlighted Errors -->
+            <div class="result-box" style="margin-top:30px;">
+                <h3>Highlighted Errors</h3>
+                <div id="highlightedText"></div>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE (RESULTS) -->
+        <div style="flex:1;">
+            <h2 class="heading-sub">Corrected Text</h2>
+
+            <div class="result-box" id="correctedText"></div>
+
+            <!-- Grammar Score -->
+            <h2 class="heading-sub" style="margin-top:30px;">
+                Grammar Score
+            </h2>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="scoreFill"></div>
+            </div>
+
+            <!-- Error List -->
+            <h2 class="heading-sub" style="margin-top:30px;">
+                Error Details
+            </h2>
+
+            <ul id="errorList"></ul>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

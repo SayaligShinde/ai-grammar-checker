@@ -1,0 +1,220 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= PAGE LAYOUT CONTROL ================= */
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: url("Background.png") no-repeat center center fixed;
+    min-height: 100vh;
+
+    display: flex;              /* Remove this if you don't want center layout */
+    justify-content: center;    /* horizontal alignment */
+    align-items: center;        /* vertical alignment */
+}
+
+/* ================= UNIVERSAL CARD BOX ================= */
+.card {
+    background: rgb(223, 226, 228);
+    border-radius: 25px;
+    border-color: aqua;
+    border: 200px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* ================= LOGIN / REGISTER PAGE ================= */
+.auth-box {
+    width: 450px;        /* change width freely */
+    min-height: 400px;   /* change height freely */
+    padding: 50px;
+    background-color: #e3e7f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* center inner items */
+    justify-content: center;
+}
+
+/* ================= GRAMMAR PAGE ================= */
+.dashboard-box {
+    width: 1200px;       /* independent from login */
+    min-height: 700px;
+    padding: 60px;
+    background-color: #e2f6fd;
+}
+
+/* ================= HEADINGS ================= */
+.heading-main {
+    font-size: 42px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+    text-align: center;   /* change to left/right anytime */
+    color: #1e1e1e;
+}
+
+.heading-sub {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* ================= INPUT CONTROL ================= */
+.input-field {
+    width: 90%;          /* change alignment width */
+    padding: 18px;
+    font-size: 18px;
+    border-radius: 14px;
+    border: 2px solid #999999;
+    margin-bottom: 20px;
+}
+
+/* ================= TEXTAREA CONTROL ================= */
+.textarea-field {
+    width: 100%;
+    height: 270px;
+    padding: 18px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 2px solid #ccc;
+}
+
+/* ================= BUTTON CONTROL ================= */
+.btn-primary {
+    width: 90%;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 12px;
+    background: #599bfe;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #5a67d8;
+}
+
+/* ================= TEXT ALIGN UTILITIES ================= */
+.text-center { text-align: center; }
+.text-left   { text-align: left; }
+.text-right  { text-align: right; }
+
+/* ================= FLEX ALIGN UTILITIES ================= */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ================= RESULT BOX ================= */
+.result-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    min-height: 150px;
+}
+
+/* ================= PROGRESS BAR ================= */
+.progress-bar {
+    width: 100%;
+    background: #ddd;
+    border-radius: 20px;
+}
+
+.progress-fill {
+    height: 20px;
+    width: 0%;
+    background: #4caf50;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+}
+
+.error-highlight {
+    color: #ff4d4d;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+/* ================= DARK MODE FULL FIX ================= */
+
+.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+/* Card background */
+.dark-mode .card {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Headings */
+.dark-mode .heading-main,
+.dark-mode .heading-sub {
+    color: #ffffff;
+}
+
+/* Inputs */
+.dark-mode .input-field,
+.dark-mode .textarea-field {
+    background: #2b2b2b;
+    color: #ffffff;
+    border: 2px solid #555;
+}
+
+/* Buttons */
+.dark-mode .btn-primary {
+    background: #3b82f6;
+}
+
+.dark-mode .btn-primary:hover {
+    background: #2563eb;
+}
+
+/* Result Box */
+.dark-mode .result-box {
+    background: #2b2b2b;
+    color: #ffffff;
+}
+
+/* Progress Bar */
+.dark-mode .progress-bar {
+    background: #444;
+}
+
+.dark-mode .progress-fill {
+    background: #22c55e;
+}
+
+/* Links */
+.dark-mode a {
+    color: #60a5fa;
+}
+
+/* ================= DARK MODE BUTTON ================= */
+
+.dark-toggle {
+    position: absolute;      /* sticks to screen */
+    bottom: 20px;            /* distance from top */
+    right: 20px;          /* distance from right */
+    padding: 8px 14px;    /* smaller size */
+    font-size: 14px;
+    border-radius: 8px;
+    background: #599bfe;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.dark-toggle:hover {
+    background: #3b82f6;
+}
